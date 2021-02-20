@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test_DotNet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .error {
+          color: red;
+          margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <h3 class="text-center">Formulario</h3>
+        <hr />        
+        <form action="Login" method="post" id="formulario">
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Usuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Pasword</label>
+                <input type="password" class="form-control" id="password" name="username" placeholder="Password" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#formulario").submit(function(e){
+                e.preventDefault();
+
+                var user = $("#username").val();
+                var password = $("#password").val();
+              
+                $(".error").remove();
+
+                if(user.length < 1)               
+                    $("#username").after('<span class="error">El campo Username es requerido</span>');                    
+
+                if(password.length < 1)
+                    $("#password").after('<span class="error">El campo Contraseña es requerido</span>');                    
+                
+                if(user.length > 1 && password.length > 1)
+                    alert("Datos listos para enviar al servidor");
+            });
+        });
+    </script>
+</body>
+</html>

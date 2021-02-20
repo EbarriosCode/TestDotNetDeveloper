@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfTarjetaDeCredito xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<TarjetaDeCredito>
+		<NombreSistema>Web Client</NombreSistema>
+		<Localizacion>Guatemala</Localizacion>
+		<Numero>324554-234545</Numero>
+		<ClienteID>1</ClienteID>
+	</TarjetaDeCredito>
+	<TarjetaDeCredito>
+		<NombreSistema>Móvil Client</NombreSistema>
+		<Localizacion>El Salvador</Localizacion>
+		<Numero>87666-22341</Numero>
+		<ClienteID>2</ClienteID>
+	</TarjetaDeCredito>
+</ArrayOfTarjetaDeCredito>
